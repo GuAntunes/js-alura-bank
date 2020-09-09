@@ -1,15 +1,18 @@
 class Negociacao {
 
-    private _data;
-    private _quantidade;
-    private _valor;
+    //Foi comentado este código pois o typescript consegue identificar
+    //quando estamos declarando um atributo diretamente no construtor,
+    //para as variáveis que inicirem com `private`
+    // private _data: Date;
+    // private _quantidade: number;
+    // private _valor: number;
 
-    constructor(data, quantidade, valor) {
-        // Por convenção quando um atributo inica com underline ele é privado
-        // sendo assim não pode ser acessado diretamente de fora da classe
-        this._data = data;
-        this._quantidade = quantidade;
-        this._valor = valor;
+    constructor(private _data: Date, private _quantidade: number, private _valor: number) {
+        // // Por convenção quando um atributo inica com underline ele é privado
+        // // sendo assim não pode ser acessado diretamente de fora da classe
+        // this._data = data;
+        // this._quantidade = quantidade;
+        // this._valor = valor;
     }
 
     get data() {
